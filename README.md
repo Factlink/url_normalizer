@@ -1,4 +1,4 @@
-# UrlNormalizer
+# UrlNormalizer [![Build Status](https://travis-ci.org/Factlink/url_normalizer.png?branch=master)](https://travis-ci.org/Factlink/url_normalizer) [![Gem Version](https://badge.fury.io/rb/url_normalizer.png)](http://badge.fury.io/rb/url_normalizer) [![Gem Version](https://badge.fury.io/rb/url_normalizer.png)](http://badge.fury.io/rb/url_normalizer) [![Code Climate](https://codeclimate.com/github/Factlink/url_normalizer.png)](https://codeclimate.com/github/Factlink/url_normalizer)
 
 TODO: Write a gem description
 
