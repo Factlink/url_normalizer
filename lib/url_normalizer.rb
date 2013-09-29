@@ -44,13 +44,13 @@ class UrlNormalizer
 
     uri_params = CGI.parse(query)
 
-    forbidden_params = forbidden_uri_params.map(&:to_s)
-    if forbidden_params
+    if forbidden_uri_params
+      forbidden_params = forbidden_uri_params.map(&:to_s)
       uri_params.reject! {|k,v| forbidden_params.include? k}
     end
 
-    allowed_params = whitelisted_uri_params.andand.map(&:to_s)
-    if allowed_params
+    if whitelisted_uri_params
+      allowed_params = whitelisted_uri_params.map(&:to_s)
       uri_params.select! {|k,v| allowed_params.include? k}
     end
 

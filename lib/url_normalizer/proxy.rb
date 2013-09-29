@@ -1,13 +1,12 @@
-require 'andand'
-
 class UrlNormalizer
   class Proxy < UrlNormalizer
     normalize_for 'fct.li'
 
     def normalize
-      url = @uri.query && CGI.parse(@uri.query)['url'].andand[0]
-      if url
-        UrlNormalizer.normalize url
+      return super unless @uri.query
+      actual_urls = CGI.parse(@uri.query)['url']
+      if actual_urls
+        UrlNormalizer.normalize actual_urls[0]
       else
         super
       end
