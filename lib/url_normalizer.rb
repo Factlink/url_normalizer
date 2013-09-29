@@ -1,3 +1,4 @@
+require "url_normalizer/version"
 require 'addressable/uri'
 require 'cgi'
 
