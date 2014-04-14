@@ -32,7 +32,13 @@ class UrlNormalizer
   end
 
   def forbidden_uri_params
-    [:utm_source, :utm_content, :utm_medium, :utm_campaign]
+    [:utm_source, :utm_content, :utm_medium, :utm_campaign,
+
+      # See https://stackoverflow.com/questions/12028116/facebook-like-referral-clicks-adding-variables-not-recognising-the-page-linke
+      # and https://stackoverflow.com/questions/11668126/has-facebook-replaced-the-fb-ref-parameter
+      :fb_source, :fb_action_ids, :fb_action_types,
+      :fb_ref, :action_ref_map, :action_object_map, :action_type_map,
+    ]
   end
 
   def whitelisted_uri_params
